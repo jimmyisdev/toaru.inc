@@ -1,0 +1,195 @@
+@import "init";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Shadows+Into+Light&family=Teko&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+
+$dark: #0A0908;
+$alert: #CC2936;
+$white: #F6F6F6;
+$bright: #00A6FB;
+$assist: #F3DE8A;
+
+$font-title: 'Teko', sans-serif;
+$font-content: 'Open Sans Condensed', sans-serif;
+$font-art: 'Shadows Into Light', cursive;
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    font-size: 3rem;
+    padding: 1rem .5rem;
+    color: $bright;
+    font-family: $font-content;
+}
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.4rem;
+}
+h5, span, p{
+    font-size: 1.2rem;
+}
+button{
+    margin: .5rem;
+    padding: .5rem;
+}
+section{
+    width: 100vw;
+    @include flexC;
+}
+// li{
+//     margin: .5rem 1rem;
+// }
+li:hover{
+    color: $alert;
+}
+
+video{
+    height: 100%;
+}
+
+
+.item_row{
+    @include flexR;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav{
+    height: 100%;
+    width: 100vw;
+}
+.nav_align{
+    @include flexR;
+    width: 100%;
+    justify-content:space-around;
+    padding: .5rem ;
+}
+
+.home{
+    position: relative;
+    @include flexC;
+    text-align: center;
+    h1{    font-size: 3.5rem }
+    h2{    font-size: 2rem }
+    &_text{
+        @include flexC;
+        background-color: rgba($color:  black, $alpha: .8);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: white;
+        z-index: 10;
+    }
+    &_video{
+        @include flexC;
+        max-height: 85vh;
+        overflow: hidden;
+    }
+    &_value{
+        @include flexC;
+    }
+}
+
+.aboutCarousel{
+    @include flexC;
+    width: 100vw;
+    max-width: 600px;
+    margin: 1rem 0;
+}
+
+.carouselItem{
+    @include flexC;
+    position: relative;
+}
+.carouselImg{
+    @include flexC;
+    height: 300px;
+    overflow: hidden;
+    img{
+        height: 500px;
+        object-fit: contain;
+    }
+}
+
+.carouselDesc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba( $dark, .6);
+}
+
+
+.aboutQuestion{
+        text-align: left;
+        overflow: hidden;
+    margin: 1rem 0;
+
+
+        button{
+        color: #212529;;
+    }
+    .aboutQuestionItemHeader, .aboutQuestionItemBody, .aboutQuestion{
+        overflow: hidden;
+        color: #212529;;
+ }
+}
+
+// ----------------------- team ----------------------- 
+.team{
+    color: #212529;
+}
+.teamCard{
+    width: 18rem;
+    margin: .5rem;
+    overflow: hidden;
+    h5{
+        color: #212529;
+    }
+}
+.teamImg, .modalImg{
+    @include flexC;
+    overflow: hidden;
+}
+.team_modal{
+    z-index: 10;
+}
+.modalDesc{
+    text-align: center;
+}
+
+
+.contact_form{
+    width: 75vw;
+    max-width: 600px;
+}
+
+main, footer{
+    text-align: center;
+    background-color: #212529;
+    color: $white;
+    overflow: hidden;
+}
+
+
+footer{
+    padding: 1rem;
+}
+
+
+//iconItem
+.iconItem{
+    font-size: 2rem;
+    margin: 1rem　0;
+}
